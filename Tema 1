@@ -1,0 +1,14 @@
+if __name__ == '__main__':
+    text = " Cainele aleargă ??  "
+    lung = len(text)
+    mijloc = lung // 2
+    prima = text[:mijloc]
+    a_doua = text[mijloc:]
+    prima = prima.upper().strip()
+    semne = [',', '.', '!', '?']
+    a_doua_inv = a_doua[::-1]
+    a_doua_inv = a_doua_inv[0].upper() + a_doua_inv[1:]
+    for s in semne:
+        a_doua_inv = a_doua_inv.replace(s, '')
+    rezultat = prima + a_doua_inv
+    print(rezultat)
